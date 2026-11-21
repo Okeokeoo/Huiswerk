@@ -31,7 +31,7 @@ root.innerHTML=`<section class="summary"><h2>${tab==='four'?'Afgelopen vier weke
 state.subjects.map(s=>{let mins=Math.floor(totals[s.id]/60);return `<section class="chartitem"><div class="line"><b>${esc(s.name)}</b><span class="muted">${mins} min</span></div><div class="charttrack"><div class="chartbar" style="width:${mins/max*100}%"></div></div><div class="estimate">Verwachte duur: ${estimate(s.id)}</div></section>`}).join('')+
 (keys.length===0?'<div class="empty">Nog geen geregistreerde tijd.</div>':'');
 
-}
+}}
 function show(html){document.getElementById('modal').innerHTML=html;document.getElementById('overlay').classList.remove('hidden')}
 function hide(){dialog=null;document.getElementById('overlay').classList.add('hidden')}
 function reward(kind,id){
